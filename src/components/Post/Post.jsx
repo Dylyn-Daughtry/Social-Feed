@@ -14,26 +14,21 @@ const Post = (props) => {
 
         function handleSubmit(submissionForm){
             submissionForm.preventDefault();
-            // props.addEntries({name:name, body:body});
-            let temp = {
+            let newEntry = {
                 name: name,
                 body: body
             };
-            console.log(temp)
-            props.addNewEntryProperty(temp)
-            // temp.push({name:name, body:body});
-            // console.log("temp", temp)
-            // setEntries(temp)
-            // console.log("entries", entries)
+            console.log(newEntry)
+            props.addNewEntryProperty(newEntry)
         }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
-                <input type='Name' onChange={(e) => setName(e.target.value)} value={name} />
+                <input type='Name' value={name} onChange={(e) => setName(e.target.value)}/>
                 <label>What do you want to say?</label>
-                <input type='body' onChange={(e) => setBody(e.target.value)} value={body} />
+                <input type='body' value={body} onChange={(e) => setBody(e.target.value)}/>
                 <button type='submit'>Submit</button>
                 
             </form>

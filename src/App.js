@@ -6,12 +6,18 @@ import './App.css'
 
 function App() {
 
-  const [entries, SetEntries] = useState([{name: 'name', body: 'body'}])
+  const [entries, SetEntries] = useState([{name: '', body: ''}])
+
+  function addNewEntry(entry){
+    let tempEntries = [entry, ...entries];
+
+    SetEntries(tempEntries);
+  }
 
   return (
       <div>
             <NavBar/>
-            <Post/>      
+            <Post addNewEntryProperty={addNewEntry}/>      
             <DisplayPost parentEntries={entries}/>
       </div>
   );
