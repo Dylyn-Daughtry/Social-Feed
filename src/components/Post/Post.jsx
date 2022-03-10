@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const Post = (props) => {
 
 
-        const [name, setName] = useState('')
-        const [body, setBody] = useState('')
+        const [name, setName] = useState([])
+        const [body, setBody] = useState([])
         // const [entries, setEntries] = useState([])
 
         // useEffect(()=>{

@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
 
-  const [entries, SetEntries] = useState([{name: '', body: ''}])
+  const [entries, SetEntries] = useState([])
 
   function addNewEntry(entry){
     let tempEntries = [entry, ...entries];
