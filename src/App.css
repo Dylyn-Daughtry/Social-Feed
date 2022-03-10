@@ -1,4 +1,7 @@
 .create-post{
     border-radius: 2rem;
-    border-color: black;
+    border-color: silver;
+}
+body{
+    background-color: beige;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import LikeDislikeButton from '../LikeDislikeButton/LikeDislikeButton';
+import './DisplayPost.css'
 const DisplayPost = (props) => {
 
 
@@ -8,21 +9,23 @@ const DisplayPost = (props) => {
             <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Post</th>
+                    <th className='name'>Name</th>
+                    <th className='post'>Post</th>
                 </tr>
             </thead>
             <tbody>
             {props.parentEntries.map((e, i)=>{
                 return (
                     <tr key={`entry-row-${i}`}>
-                        <td>{e.name}</td>
-                        <td>{e.body}</td>
+                        <td className='nameTitle'>{e.name}</td>
+                        <td className='nameTitle'>{e.body}</td>
+                        <td><LikeDislikeButton/></td>
                     </tr>
                 );
             })}
             </tbody>
             </table>
+
         </div>
     );
 }
